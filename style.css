@@ -1,0 +1,96 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY CON FONDO */
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+        url("vista-superior-disco-duro-luz-purpura_23-2149413404.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0,0,0,0.6);
+}
+
+/* TITULO */
+h1 {
+    font-size: 40px;
+    color: #00ffe0;
+    text-shadow: 0 0 15px #00ffe0;
+}
+
+/* MENU */
+nav {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: #ccc;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00ffe0;
+}
+
+/* SECCIONES */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00ffe0;
+    text-shadow: 0 0 10px #00ffe0;
+}
+
+/* GENEROS */
+.genres {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffe0;
+    text-align: center;
+}
+
+/* VIDEO */
+iframe {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffe0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+}
