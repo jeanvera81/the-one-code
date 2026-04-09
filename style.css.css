@@ -7,108 +7,149 @@
 
 /* BODY */
 body {
-    background-color: #0a0a0a;
-    color: #e0e0e0;
-    font-family: 'Courier New', monospace;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    text-align: center;
+
+    /* 🔥 FONDO */
+    background: linear-gradient(rgba(0,0,30,0.7), rgba(0,0,0,0.9)),
+                url("fondo.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* IMPORTANTE PARA CELULAR */
+    background-attachment: scroll;
 }
 
 /* HEADER */
 header {
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom: 1px solid #222;
+    padding: 20px;
 }
 
-/* EFECTO GLITCH */
-.glitch {
-    font-size: 2.5rem;
-    color: #fff;
-    position: relative;
-    animation: glitch 1s infinite;
+header h1 {
+    font-size: 2rem;
 }
 
-@keyframes glitch {
-    0% { text-shadow: 2px 2px red; }
-    25% { text-shadow: -2px -2px blue; }
-    50% { text-shadow: 2px -2px lime; }
-    75% { text-shadow: -2px 2px red; }
-    100% { text-shadow: 2px 2px blue; }
-}
-
-/* SUBTITULO */
 header p {
-    margin-top: 10px;
-    color: #888;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 /* NAV */
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    border-bottom: 1px solid #222;
+    margin: 10px 0;
 }
 
 nav a {
-    color: #ccc;
+    margin: 8px;
+    color: #0ff;
     text-decoration: none;
+    font-size: 14px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: lime;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
+    padding: 30px 15px;
+    background: rgba(0,0,0,0.5);
 }
 
-.hero h2 {
-    font-size: 2rem;
-    color: #00ffcc;
-}
-
-/* SECCIÓN GÉNEROS */
+/* GENEROS */
 .genres {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
 }
 
 /* CARDS */
 .card {
-    background: #111;
-    border: 1px solid #222;
-    padding: 20px;
-    width: 250px;
+    background: rgba(0,0,0,0.7);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0,255,0,0.1);
 }
 
 .card:hover {
     transform: scale(1.05);
-    border-color: lime;
-    box-shadow: 0 0 20px rgba(0,255,0,0.4);
+    box-shadow: 0 0 20px #0ff;
 }
 
-.card h3 {
-    margin-bottom: 10px;
-    color: #00ffcc;
+/* VIDEO */
+.video-player {
+    width: 95%;
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
 }
 
-.card p {
-    color: #aaa;
+/* CONTACTO */
+#contacto a {
+    color: #0ff;
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    text-shadow: 0 0 10px #0ff;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #222;
-    color: #666;
+    padding: 15px;
+    background: rgba(0,0,0,0.7);
+    font-size: 12px;
+}
+
+/* 🔥 EFECTO TITULO (NEON + PARPADEO) */
+.glitch {
+    font-size: 2.5rem;
+    color: #0ff;
+    animation: flicker 2s infinite;
+}
+
+/* ANIMACION PARPADEO */
+@keyframes flicker {
+    0%   { opacity: 1; text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+    10%  { opacity: 0.3; text-shadow: none; }
+    20%  { opacity: 1; text-shadow: 0 0 15px #0ff; }
+    30%  { opacity: 0.1; text-shadow: none; }
+    40%  { opacity: 1; text-shadow: 0 0 20px #0ff; }
+    60%  { opacity: 0.5; text-shadow: 0 0 5px #0ff; }
+    70%  { opacity: 1; text-shadow: 0 0 25px #0ff; }
+    80%  { opacity: 0.2; text-shadow: none; }
+    100% { opacity: 1; text-shadow: 0 0 10px #0ff; }
+}
+
+/* 📱 TABLET Y PC */
+@media (min-width: 768px) {
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    .video-player {
+        max-width: 800px;
+    }
 }

@@ -2,45 +2,100 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>the One Code</title>
+    <title>The One Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
+    <!-- Fuente -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Fuente -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        /* BODY CON FONDO */
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            color:#ffbe0b;
+            text-align: center;
+
+            background: linear-gradient(rgba(0,0,30,0.7), rgba(0,0,0,0.9)),
+                        url("binary-code-abstract-technology-background-big-data-coding-hacker-concept-computer-technologies-flowing-number-one-zero-134686376.webp");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* VIDEO */
+        .video-player {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        header {
+            padding: 20px;
+        }
+
+        nav a {
+            margin: 10px;
+            color: #0ff;
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .genres {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.7);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        footer {
+            padding: 20px;
+            background: rgba(0,0,0,0.7);
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1 class="glitch">THE ONE CODE</h1>
+    <h1>THE ONE CODE</h1>
     <p>Industrial | Grunge | Electrónica</p>
 </header>
 
 <nav>
-    <a href="#">start</a>
-    <a href="#generos">gender</a>
-    <a href="#musica">Músic</a>
+    <a href="#">Start</a>
+    <a href="#generos">Gender</a>
+    <a href="#musica">Music</a>
     <a href="#contacto">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
     <h2>Raw, digital, and rebellious sound</h2>
 </section>
 
-<!-- GENEROS -->
 <section id="generos" class="genres">
 
     <div class="card">
         <h3>Industrial</h3>
-        <p>Mechanical, dark, and aggressive sounds.></p>
+        <p>Mechanical, dark, and aggressive sounds.</p>
     </div>
 
     <div class="card">
-        <h3>Grunge</h3>
+        <h3>Indie</h3>
         <p>Distortion, rebellion, and raw emotion.</p>
     </div>
 
@@ -51,30 +106,27 @@
 
 </section>
 
-<!-- VIDEO LOCAL -->
 <section id="musica" class="hero">
-    <h2>listen to something</h2>
+    <h2>Listen to something</h2>
 
     <video controls class="video-player">
         <source src="ensayo.mp4" type="video/mp4">
         Tu navegador no soporta video.
     </video>
-
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto" class="hero">
     <h2>Contacto</h2>
 
     <p>
-        <a href="https://www.instagram.com/theonecode_/reel/DWMhaWrDqMG/" target="_blank">Instagram</a> |
+        <a href="https://www.instagram.com/reel/DWEnmpBDt3x/" target="_blank">Instagram</a> |
         <a href="https://www.youtube.com/" target="_blank">YouTube</a> |
         <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
     </p>
 </section>
 
 <footer>
-    <p>© 2026 THE one code</p>
+    <p>© 2026 THE ONE CODE</p>
 </footer>
 
 </body>
