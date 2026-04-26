@@ -2,113 +2,236 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>The One Code</title>
+    <title>THE ONE CODE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fuente -->
-    <link rel="stylesheet" href="style.css">
+    <!-- FUENTE CYBER -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* BODY CON FONDO */
-        body {
-            margin: 0;
-            font-family: 'Orbitron', sans-serif;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Orbitron', sans-serif;
+            color:#fff;
+            background:
+            linear-gradient(rgba(0,0,20,0.75), rgba(0,0,0,0.92)),
+            url("binary-code-abstract-technology-background-big-data-coding-hacker-concept-computer-technologies-flowing-number-one-zero-134686376.webp");
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+            overflow-x:hidden;
+        }
+
+        /* MENU */
+        nav{
+            position:fixed;
+            width:100%;
+            top:0;
+            left:0;
+            padding:20px;
+            background:rgba(0,0,0,0.65);
+            backdrop-filter:blur(8px);
+            text-align:center;
+            z-index:999;
+        }
+
+        nav a{
+            color:#00f7ff;
+            text-decoration:none;
+            margin:0 25px;
+            font-size:18px;
+            transition:.4s;
+        }
+
+        nav a:hover{
             color:#ffbe0b;
-            text-align: center;
+            text-shadow:0 0 15px #ffbe0b;
+        }
 
-            background: linear-gradient(rgba(0,0,30,0.7), rgba(0,0,0,0.9)),
-                        url("binary-code-abstract-technology-background-big-data-coding-hacker-concept-computer-technologies-flowing-number-one-zero-134686376.webp");
+        /* PORTADA */
+        .hero{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            text-align:center;
+            padding:120px 20px 60px;
+        }
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        .hero img{
+            width:90%;
+            max-width:900px;
+            filter:drop-shadow(0 0 25px #00f7ff);
+            animation:pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse{
+            from{transform:scale(1);}
+            to{transform:scale(1.03);}
+        }
+
+        .hero h2{
+            margin-top:30px;
+            font-size:28px;
+            color:#00f7ff;
+            letter-spacing:5px;
+        }
+
+        /* SECCIONES */
+        section{
+            padding:80px 20px;
+            text-align:center;
+        }
+
+        section h2{
+            font-size:35px;
+            margin-bottom:30px;
+            color:#ffbe0b;
+            text-shadow:0 0 10px #ffbe0b;
+        }
+
+        /* FOTO BANDA */
+        .band-photo{
+            width:90%;
+            max-width:700px;
+            border-radius:20px;
+            box-shadow:0 0 25px rgba(0,247,255,0.6);
+            transition:0.5s;
+        }
+
+        .band-photo:hover{
+            transform:scale(1.02);
+            box-shadow:0 0 35px rgba(255,190,11,0.8);
+        }
+
+        .about-text{
+            max-width:900px;
+            margin:30px auto;
+            font-size:18px;
+            line-height:1.8;
+            background:rgba(0,0,0,0.45);
+            padding:25px;
+            border-radius:20px;
         }
 
         /* VIDEO */
-        .video-player {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-radius: 10px;
+        .video-player{
+            width:90%;
+            max-width:900px;
+            border-radius:20px;
+            box-shadow:0 0 25px #00f7ff;
         }
 
-        header {
-            padding: 20px;
+        /* TARJETAS */
+        .genres{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
         }
 
-        nav a {
-            margin: 10px;
-            color: #0ff;
-            text-decoration: none;
+        .card{
+            width:260px;
+            background:rgba(0,0,0,0.6);
+            border:1px solid #00f7ff;
+            padding:25px;
+            border-radius:20px;
+            box-shadow:0 0 15px rgba(0,247,255,0.3);
+            transition:0.4s;
         }
 
-        .hero {
-            padding: 40px 20px;
-            background: rgba(0,0,0,0.5);
+        .card:hover{
+            transform:translateY(-10px);
+            border-color:#ffbe0b;
+            box-shadow:0 0 25px rgba(255,190,11,0.8);
         }
 
-        .genres {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .card h3{
+            margin-bottom:15px;
+            color:#00f7ff;
         }
 
-        .card {
-            background: rgba(0,0,0,0.7);
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-            width: 250px;
+        /* SOCIAL */
+        .social a{
+            color:#00f7ff;
+            text-decoration:none;
+            margin:0 20px;
+            font-size:22px;
+            transition:0.4s;
         }
 
-        footer {
-            padding: 20px;
-            background: rgba(0,0,0,0.7);
+        .social a:hover{
+            color:#ffbe0b;
+            text-shadow:0 0 15px #ffbe0b;
         }
+
+        footer{
+            background:rgba(0,0,0,0.8);
+            text-align:center;
+            padding:25px;
+            font-size:14px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+            nav a{
+                display:block;
+                margin:10px 0;
+            }
+
+            .hero h2{
+                font-size:20px;
+            }
+
+            section h2{
+                font-size:26px;
+            }
+
+            .card{
+                width:90%;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>THE ONE CODE</h1>
-    <p>Industrial | Grunge | Electrónica</p>
-</header>
-
 <nav>
-    <a href="#">Start</a>
-    <a href="#generos">Gender</a>
-    <a href="#musica">Music</a>
-    <a href="#contacto">Contact</a>
+    <a href="#inicio">START</a>
+    <a href="#about">ABOUT</a>
+    <a href="#music">VIDEO</a>
+    <a href="#genres">GENRES</a>
+    <a href="#contact">CONTACT</a>
 </nav>
 
-<section class="hero">
-    <h2>Raw, digital, and rebellious sound</h2>
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+    <img src="1776385017047.jpg" alt="THE ONE CODE">
+    <h2>RAW DIGITAL REBELLIOUS SIGNAL</h2>
 </section>
 
-<section id="generos" class="genres">
+<!-- FOTO BANDA -->
+<section id="about">
+    <h2>THE PROJECT</h2>
+    <img src="1775692398942.jpg" class="band-photo" alt="Band Photo">
 
-    <div class="card">
-        <h3>Industrial</h3>
-        <p>Mechanical, dark, and aggressive sounds.</p>
+    <div class="about-text">
+        THE ONE CODE is a collision between industrial darkness, grunge distortion and electronic pulse.  
+        A digital rebellion converted into sound, signal and visual noise.
     </div>
-
-    <div class="card">
-        <h3>Indie</h3>
-        <p>Distortion, rebellion, and raw emotion.</p>
-    </div>
-
-    <div class="card">
-        <h3>Electrónica</h3>
-        <p>Digital rhythms and futuristic energy.</p>
-    </div>
-
-
 </section>
 
-<section id="musica" class="hero">
-    <h2>Listen to something</h2>
+<!-- VIDEO -->
+<section id="music">
+    <h2>LIVE SESSION / REHEARSAL</h2>
 
     <video controls class="video-player">
         <source src="ensayo.mp4" type="video/mp4">
@@ -116,18 +239,43 @@
     </video>
 </section>
 
-<section id="contacto" class="hero">
-    <h2>Contacto</h2>
+<!-- GENEROS -->
+<section id="genres">
+    <h2>SONIC DNA</h2>
 
-    <p>
-        <a href="https://www.instagram.com/reel/DWEnmpBDt3x/" target="_blank">Instagram</a> |
-        <a href="https://www.youtube.com/" target="_blank">YouTube</a> |
-        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
-    </p>
+    <div class="genres">
+
+        <div class="card">
+            <h3>INDUSTRIAL</h3>
+            <p>Mechanical noise, dark atmosphere and metal pressure.</p>
+        </div>
+
+        <div class="card">
+            <h3>GRUNGE</h3>
+            <p>Underground dirt, rebellion and raw human emotion.</p>
+        </div>
+
+        <div class="card">
+            <h3>ELECTRONIC</h3>
+            <p>Binary pulse, futuristic frequencies and digital tension.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contact">
+    <h2>CONNECT SIGNAL</h2>
+
+    <div class="social">
+        <a href="https://www.instagram.com/reel/DWEnmpBDt3x/" target="_blank">INSTAGRAM</a>
+        <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+        <a href="https://www.tiktok.com/" target="_blank">TIKTOK</a>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 THE ONE CODE</p>
+    © 2026 THE ONE CODE — ALL RIGHTS RESERVED
 </footer>
 
 </body>
